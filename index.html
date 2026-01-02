@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Analítica Telco - Industrial</title>
+</head>
+<body>
+    <h1>Panel de Control de Sensores Digitales</h1>
+    <p>Simulación de flujo de contratación de servicios.</p>
+    
+    <button id="btn-contratar" onclick="trackLead()">Contratar Plan 5G</button>
+
+    <script>
+        function trackLead() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'solicitud_servicio',
+                'item_name': 'Plan 5G Pro',
+                'region_cl': 'Santiago',
+                'valor_clp': 15990
+            });
+            alert('Señal enviada al Data Layer');
+        }
+    </script>
+</body>
+</html>
